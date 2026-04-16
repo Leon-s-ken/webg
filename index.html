@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-  <title> having fun rookie?</title>
+    <title>Multiplication of Alpha and Beta</title>
 </head>
-  
-  <body>
-    <div align="center">
-    <h1>woah you made it here </h1>
- </div>
+<body>
+    <h2>Enter values for Alpha and Beta</h2>
+    <form onsubmit="event.preventDefault(); multiply();">
+        Alpha: <input type="number" id="alpha" required/><br/><br/>
+        Beta:  <input type="number" id="beta" required/><br/><br/>
+        <input type="submit" value="Multiply"/>
+    </form>
+    <div id="result"></div>
 
-    <h2> now it's redemption time</h2>
-    <p>
-      you are done for
-    </p>
-
-    <h2> Cheeki breeki</h2>
-    <ul>
-      <li>AK 74</li>
-      <li>HK416</li>
-    </ul>
-
-    <h2> for more info click, yk know where</h2>
-    <a href="https://www.youtube.com/watch?v=_A9PioTa-so" target="_Blank">
-      Click Stalker
-    </a>
-  </body>
-
+    <script>
+        function multiply() {
+            let alpha = parseFloat(document.getElementById('alpha').value);
+            let beta = parseFloat(document.getElementById('beta').value);
+            let result = alpha * beta;
+            document.getElementById('result').innerHTML = `
+                <hr/>
+                <h3>Results:</h3>
+                Alpha = ${alpha}<br/>
+                Beta = ${beta}<br/>
+                <strong>Alpha × Beta = ${result}</strong>
+            `;
+        }
+    </script>
+</body>
 </html>
